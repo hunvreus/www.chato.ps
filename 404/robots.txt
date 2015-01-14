@@ -1,4 +1,4 @@
-Sitemap: http://sweepboard.com/sitemap.xml
+Sitemap: http://chato.ps/sitemap.xml
 
 User-agent: *
 Disallow: /images/
