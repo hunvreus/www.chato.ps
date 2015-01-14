@@ -1,0 +1,40 @@
+{% extends 'default.html' %}
+
+{% block content %}
+<section id='main' class='blog post'>
+  <div class='wrapper'>
+    <header class='header'>
+      <a href='/blog' class='back'><span>Back to the blog</span></a>
+
+      <h1>{{ title }}</h1>
+
+      <span class='meta'>
+        {% for member in team %}
+        {% if member.user == author %}
+          <img class='avatar' alt='{{ member.title }}' src='/images/team/{{ member.user }}-small.png'/> 
+          {{ member.title }}
+        {% endif %}
+        {% endfor %}
+        on <time datetime='{{ post.date | date(c) }}'>{{ date | date('F d, Y') }}</time>
+      </span>
+    </header>
+
+    <article class='content'>
+      {{ contents | safe }}
+      
+      <footer class='share'>
+        {% include 'partials/_social.html' %}
+      </footer>
+
+      <footer class='subscribe'>
+        <h2>Like what you just read?</h2>
+        <p>Leave us your email address and we'll shoot you an email once in a while to share new content. We mostly write about development, infrastructure and DevOps.</p>
+        {% include 'partials/subscribe.html' %}
+        <p>You can also <a href='http://feeds.feedburner.com/devo/BQLM' class='rss'>Subscribe to our RSS feed</a>.</p>
+      </footer>
+
+      {% include 'partials/_disqus.html' %}
+    </section>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,97 @@
+
+/* Smartphones, iPhone, portrait 480x320 phones */
+
+@media (max-width: 481px) {
+  html {
+    font-size: 57%;
+  }
+
+  #main {
+    .sidebar {
+      @include clearfix;
+      border-bottom: 1px solid $light;
+      margin-bottom: $gutter;
+      padding-bottom: $gutter;
+    }
+  }
+}
+
+/* Portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+@media (max-width: 641px) {
+  #header {
+    .toggle {
+      float: right;
+      font-family: $headline;
+      span {
+        display: none;
+      }
+      &:before {
+        @include icon;
+        content: '=';
+        float: right;
+        @include font-size($larger);
+        margin-left: $gutter/4;
+        vertical-align: middle;
+      }
+      &.active {
+        &:before {
+          content: 'x';
+        }
+        + .menu {
+          display: block;
+        }
+      }
+    }
+    .menu {
+      display: none;
+      margin: 1.5*$gutter 0 (-1.5*$gutter);
+      a {
+        border-top: 1px solid shade($purple, 10%);
+        display: block;
+        padding: 1.5*$gutter/2 0;
+      }
+    }
+  }
+}
+
+/* Portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+@media (min-width: 481px) and (max-width: 641px) {
+  html {
+    font-size: 59%;
+  }
+}
+
+/* Portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+
+@media (min-width: 641px) {
+  #header {
+    @include clearfix;
+    .toggle {
+      display: none;
+    }
+    .menu {
+      float: right;
+      line-height: 160%;
+      a {
+        margin-left: $gutter;
+        &.active {
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+
+/* Tablet, landscape iPad, lo-res laptops ands desktops */
+
+@media (min-width: 961px) { }
+
+/* Big landscape tablets, laptops, and desktops */
+
+@media (min-width: 1025px) { }
+
+/* Hi-res laptops and desktops */
+
+@media (min-width: 1281px) { }

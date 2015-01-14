@@ -1,0 +1,15 @@
+{% extends 'default.html' %}
+
+{% block content %}
+<section id='main' class='page'>
+  <div class='wrapper'>
+    <header class='header'>
+      <h1>{{ title }}</h1>
+    </header>
+
+    <section class='content'>
+      {{ contents | safe }}
+    </section>
+  </div>
+</section>
+{% endblock %}
