@@ -1,4 +1,0 @@
-Sitemap: http://chato.ps/sitemap.xml
-
-User-agent: *
-Disallow: /images/
