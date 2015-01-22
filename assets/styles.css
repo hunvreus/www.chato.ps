@@ -2509,6 +2509,21 @@ input[type=radio], input[type=checkbox] {
   text-align: left; }
   #main .content img {
     max-width: 100%; }
+  #main .sidebar {
+    background: #FFF;
+    border-radius: 3px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: right;
+    padding: 10px;
+    width: 360px; }
+    #main .sidebar + .content {
+      margin-right: 380px; }
+    #main .sidebar a {
+      display: block;
+      padding: 10px; }
   #main h1 {
     text-align: center; }
   #main.landing {

@@ -9268,6 +9268,29 @@ $(function() {
   setInterval('slideChat()', 6000);
 });
 $(function() {
+  // Adding the navigation sidebar
+  var nav = $('<nav class="sidebar"></nav>');
+  $('body.page-faq .content').before(nav);
+  $('body.page-faq .content h2').each(function () {
+    nav.append('<a href="#' + $(this).attr('id') + '">' + $(this).html() + '</a>');
+  });
+
+  // Making the navbar sticky
+  var navTop = nav.offset().top;
+  var parentTop = nav.parent().offset().top;
+  console.log(navTop);
+  var sticky = function() {
+    var scrollTop = $(window).scrollTop();
+    if (scrollTop > navTop - 10) {
+      nav.css({'top': (scrollTop - parentTop + 10), 'right':'0', 'position':'absolute'});
+    } else {
+      nav.css({'top':'', 'right': '', 'position':'relative'});
+    }
+  };
+  sticky();
+  $(window).scroll(function() { sticky(); });
+});
+$(function() {
   $('#header .toggle').click(function () {
     $(this).toggleClass('active');
   });
