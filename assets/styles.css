@@ -2507,6 +2507,8 @@ input[type=radio], input[type=checkbox] {
 #main {
   padding: 40px 0;
   text-align: left; }
+  #main .content img {
+    max-width: 100%; }
   #main h1 {
     text-align: center; }
   #main.landing {

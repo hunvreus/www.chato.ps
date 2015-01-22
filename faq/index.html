@@ -4,7 +4,7 @@
   <meta charset='utf-8'/>
   <meta name='viewport' content='width=device-width, initial-scale=1'/>
 
-  <title>Integrate hundreds of services into your team chat | ChatO.ps</title>
+  <title>Frequently Asked Questions | ChatO.ps</title>
 
   <meta http-equiv='Content-Language' content='en'/>
   <meta name='keywords' content='ChatOps, Hubot, bot, chat, automation'/>
@@ -33,7 +33,7 @@
   <!-- CSS -->
   <link href='/assets/styles.css' rel='stylesheet' type='text/css'/>
 </head>
-<body class='page-front'>
+<body class='page-faq'>
   <header id='header'>
     <div class='wrapper'>
       <a class='logo' href='/'><span>ChatO.ps</span></a>
@@ -48,111 +48,44 @@
     </div>
   </header>
 
-  <section id='main' class='landing'>
-  <header class='section' id='hero'>
-    <div class='wrapper'>
-      <h1>Put your chat to work</h1>
-      <h2>Integrate hundreds of services into your team chat</h2>
-      <a href='http://app.chato.ps' class='button add'>Sign up - It's free</a>
-    </div>
-  </header>
+  
+<section id='main' class='page'>
+  <div class='wrapper'>
+    <header class='header'>
+      <h1>Frequently Asked Questions</h1>
+    </header>
 
-  <section class='section' id='pain'>
-    <div class='wrapper'>
-        <h2>Stop switching between a gazillion apps</h2>
+    <section class='content'>
+      <p><a href="#how-do-i-connect-my-bot-to-hipchat-">How do I connect my bot to HipChat</a></p>
+<h2 id="how-do-i-connect-my-bot-to-hipchat-">How do I connect my bot to HipChat?</h2>
+<ol>
+<li><p>Go to the HipChat users admin page (<code>https://&lt;ORGANIZATION&gt;.hipchat.com/admin/users</code>) by clicking &quot;Group admin&quot; and then &quot;Users&quot;.</p>
+<p> <img src="/images/faq/hipchat-users.png" alt="HipChat users admin"/></p>
+</li>
+<li><p>Fill in the information required for your bot&#39;s account.</p>
+<p> <img src="/images/faq/hipchat-create-user.png" alt="HipChat create user"/></p>
+</li>
+<li><p>You&#39;ll receive an email to confirm your account.</p>
+<p> <img src="/images/faq/hipchat-confirm-user.png" alt="HipChat create user"/></p>
+<p> <img src="/images/faq/hipchat-confirm-user2.png" alt="HipChat create user"/></p>
+</li>
+<li><p>Once the account for your bot is created, go to the Jabber information for this account by clicking &quot;Account settings&quot; and then &quot;XMPP/Jabber Info&quot;. You want to copy 2 pieces of information:</p>
+<ol>
+<li>The <strong>Jabber ID</strong> (XXX_XXX@chat.hipchat.com)</li>
+<li><p>The <strong>XMPP/Jabber Name</strong> for the rooms you&#39;ll want your bot to join (YYY_YYY)</p>
+<p><img src="/images/faq/hipchat-jabber.png" alt="HipChat create user"/></p>
+</li>
+</ol>
+</li>
+<li><p>You can now set up your bot on ChatO.ps. On the &quot;Connect your bot&quot; step, select the &quot;HipChat&quot; tab and fill in the information you copied in the previous step. <strong>When adding a HipChat room, you&#39;ll need to use the Jabber name and append &quot;@conf.hipchat.com&quot;</strong>.</p>
+<p> <img src="/images/faq/hipchat-chatops.png" alt="HipChat ChatO.ps settings"/></p>
+</li>
+</ol>
 
-        <ul class='graphic'>
-          <li><img src='/images/logos/heroku.png' alt='slack'/></li>
-          <li><img src='/images/logos/asana.png' alt='slack'/></li>
-          <li><img src='/images/logos/circleci.png' alt='slack'/></li>
-          <li><img src='/images/logos/trello.png' alt='slack'/></li>
-          <li><img src='/images/logos/pagerduty.png' alt='slack'/></li>
-          <li><img src='/images/logos/github.png' alt='slack'/></li>
-        </ul>
-
-        <article class='pitch'>
-          <p>Your team is probably already spending way too much time dealing with an ever-increasing list of services: <strong>GitHub</strong>, <strong>PagerDuty</strong>, <strong>Heroku</strong>, <strong>Trello</strong>, <strong>CircleCI</strong>, <strong>Mailchimp</strong>... This is only going to get worse:</p>
-          <ul>
-            <li>Switching between apps is adding <u>friction to your daily workflow</u>,</li>
-            <li>Managing who needs to access what on your team is a <u>pain in the butt</u>,</li>
-            <li>People are working in silo, <u>rarely seeing what the rest of the team is up to</u>.</li>
-          </ul>
-        </article>
-    </div>
-  </section>
-
-  <section class='section' id='fix'>
-    <div class='wrapper'>
-      <h2>Make it all work from your team chat</h2>
-
-      <section class='pitch'>
-        <p>May this be <strong>Campfire</strong>, <strong>Slack</strong>, <strong>HipChat</strong> or <strong>IRC</strong>, your team is probably already using chat as a central point of communication. Using ChatO.ps you can add a bot to your chat and make your life easier:</p>
-        <ul>
-          <li>Let team members easily access 3<sup>rd</sup> party services,</li>
-          <li>Keep everybody in the loop about what's happening with notifications,</li>
-          <li>Let the team see who's doing what and how.</li>
-        </ul>
-        <p>Start deploying your app to Heroku with a single message. Receive alerts when your build fail and notifications when somebody assign a task to you... We have hundreds of integrations available.</p>
-      </section>
-
-      <div class='graphic'>
-        <ul class='chats'>
-          <li class='active'><img src='/images/logos/slack.png' alt='slack'/></li>
-          <li><img src='/images/logos/hipchat.png' alt='HipChat'/></li>
-          <li><img src='/images/logos/flowdock.png' alt='Flowdock'/></li>
-          <li><img src='/images/logos/campfire.png' alt='Campfire'/></li>
-        </ul>
-        <strong>+</strong>
-        <ul class='services'>
-          <li class='active'><img src='/images/logos/heroku.png' alt='heroku'/></li>
-          <li><img src='/images/logos/asana.png' alt='asana'/></li>
-          <li><img src='/images/logos/circleci.png' alt='circleci'/></li>
-          <li><img src='/images/logos/trello.png' alt='trello'/></li>
-          <li><img src='/images/logos/pagerduty.png' alt='pagerduty'/></li>
-          <li><img src='/images/logos/github.png' alt='github'/></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class='section' id='pricing'>
-    <div class='wrapper'>
-      <h2>It will cost you a whopping $0</h2>
-
-      <article class='plan free'>
-        <div class='card'>
-          <h3>Free</h3>
-          <ul>
-            <li>1 bot</li>
-            <li>Unlimited plugins</li>
-            <li>Custom plugin support</li>
-            <li><s>Unlimited logs</s></li>
-            <li><s>Alerts</s></li>
-          </ul>
-        </div>
-        <footer class='footer'>
-          <a href='http://app.chato.ps/' class='button add'>Sign up</a>
-        </footer>
-      </article>
-
-      <article class='plan pro'>
-        <div class='card'>
-          <h3>Pro</h3>
-          <ul>
-            <li>Unlimited bots</li>
-            <li>Unlimited plugins</li>
-            <li>Custom plugin support</li>
-            <li>Unlimited logs</li>
-            <li>Alerts</li>
-          </ul>
-        </div>
-        <footer class='footer'>
-          <button class='button add' disabled>Sign up</button>
-        </footer>
-      </article>
-    </div>
-  </section>
+    </section>
+  </div>
 </section>
+
 
   <nav id='footer'>
     <div class='wrapper'>
